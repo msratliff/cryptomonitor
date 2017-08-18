@@ -15,14 +15,14 @@ ActiveRecord::Schema.define(version: 20170818182818) do
   create_table "currencies", force: :cascade do |t|
     t.string "name"
     t.string "symbol"
+    t.string "name_sym"
     t.float "price_0"
     t.float "price_1"
     t.float "price_2"
     t.integer "days_doubled"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["name"], name: "index_currencies_on_name", unique: true
-    t.index ["symbol"], name: "index_currencies_on_symbol", unique: true
+    t.index ["name_sym"], name: "index_currencies_on_name_sym", unique: true
   end
 
 end
